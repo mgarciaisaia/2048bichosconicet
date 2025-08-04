@@ -116,7 +116,6 @@ HTMLActuator.prototype.updateScore = function (score) {
   this.score = score;
 
   this.scoreContainer.textContent = this.score;
-  document.getElementById('scouter-score').textContent = this.score;
 
   if (difference > 0) {
     var addition = document.createElement("div");
@@ -165,26 +164,26 @@ HTMLActuator.prototype.scoreTweetButton = function () {
   var tweet = document.createElement("a");
   tweet.classList.add("twitter-share-button");
   tweet.setAttribute("href", "https://twitter.com/share");
-  tweet.setAttribute("data-url", "https://mgarciaisaia.github.io/2048dbz/");
-  tweet.setAttribute("data-counturl", "https://mgarciaisaia.github.io/2048dbz/");
+  tweet.setAttribute("data-url", "https://mgarciaisaia.github.io/2048bichosconicet/");
+  tweet.setAttribute("data-counturl", "https://mgarciaisaia.github.io/2048bichosconicet/");
   tweet.textContent = "Tweet";
 
   var textosSegunFase = {
-    2: '¡Hola, soy Gokú!',
-    4: '¡Hola, soy Gokú! ¡Y me convertí en un mono gigante!',
-    8: '¡Terminé de entrenar con Kamisama y derrotaré a Piccoro!',
-    16: '¡Ya verás Vegeta! ¡Kaioken!',
-    32: '¡Yo soy el supersaiyajín Gokú! Por todos los guerreros saiyajin que asesinaste, y también por todos los namekuseijin que mataste, juro que ¡¡TE EXTERMINARE!!',
-    64: 'Éste es el que supera al supersaiyajín ordinario, admito que es muy poderoso.',
-    128: '¡Prepárate Majin Boo! ¡Soy un supersaiyajín fase 3!',
-    256: '¿Qué pasó? ¡Soy un niño otra vez!',
-    512: '¡Este cuerpo no puede soportar tanto poder!, soy un supersaiyajín fase 3.',
-    1024: '¡Soy Gokú y me convertí en un Ōzaru dorado!',
-    2048: '¡Gané! ¡Logré convertirme en supersaiyajín fase 4!'
+    2: '¡Capturé una esponja!',
+    4: '¡Encontré a batatita!',
+    8: '¡Un cangreburguer!',
+    16: '¡Ví un pulpito azul!',
+    32: 'El pez-Alberto no existe',
+    64: '¡Una manta raya!',
+    128: 'Me gustaría poder describir lo que veo.',
+    256: '¡Ayudame, loc@!',
+    512: 'El océano profundo es muy extraño.',
+    1024: 'Casi casi llego...',
+    2048: '¡Gané! ¡Logré capturar a Patricio Estrella! (¡y sus nalgas!)'
   };
 
-  var text = textosSegunFase[this.maxTileValue] + " (¡Hice " + this.score + " puntos en 2048DBZ, un juego en que " +
-             "unís Gokús para levelearlos!) #2048dbz #2048game #dbz";
+  var text = textosSegunFase[this.maxTileValue] + " (¡Hice " + this.score + " puntos en 2048 Bichos Conicet, un juego en que " +
+             "unís bichos para capturar a Patricio Estrella!) #2048bichosconicet #2048game #bichosconicet";
   tweet.setAttribute("data-text", text);
 
   return tweet;
